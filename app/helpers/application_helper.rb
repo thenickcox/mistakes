@@ -12,4 +12,12 @@ module ApplicationHelper
     html.html_safe
   end
 
+  def formatted_date(post)
+    "Posted on #{post.date.try(:strftime, "%B %d, %Y")}"
+  end
+
+  def render_post(post)
+    find_and_preserve(post.content_html.html_safe)
+  end
+
 end

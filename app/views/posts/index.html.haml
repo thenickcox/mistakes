@@ -1,0 +1,24 @@
+- if can? :manage, @post
+  %table
+    %tr
+      %td Name
+      %td Date
+      %td Admin
+    - Post.where(public: false).each do |post|
+      %td= link_to post.name
+      %td= post.date
+      %td
+        %span= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        = form_for post, remote: true do |f|
+          = f.public
+
+
+- @posts.each do |post|
+  %h1= post.title
+  %h4.date= formatted_date(post) 
+  - if can? :manage, @post
+    %ul.admin
+      %td= link_to 'Edit', edit_post_path(post)
+      %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+  %div= render_post(post)
+
