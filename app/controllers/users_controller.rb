@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
+  
+  def user_params
+    params.require(:post).permit(:name, :email, :password, :password_confirmation, :remember_me)
+  end
 
   def index
     authorize! :index, @user, :message => 'Not authorized as an administrator.'

@@ -1,4 +1,4 @@
-Myapp::Application.configure do
+Mistakes::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -50,6 +50,11 @@ Myapp::Application.configure do
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
+
+  config.eager_load = true
+
+  # Compress JavaScripts and CSS
+  config.assets.js_compressor = :uglifier
 
   # Enable threaded mode
   # config.threadsafe!

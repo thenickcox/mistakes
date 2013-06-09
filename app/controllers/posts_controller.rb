@@ -1,4 +1,9 @@
 class PostsController < ApplicationController
+  
+  def post_params
+    params.require(:post).permit(:content, :title, :content_html, :date, :tag_list)
+  end
+  
   # GET /posts
   # GET /posts.json
   def index
@@ -40,7 +45,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(params[:post])
+    @post = Post.new(post_params)
 
     respond_to do |format|
       if @post.save

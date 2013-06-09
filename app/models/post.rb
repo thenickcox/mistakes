@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   before_save :generate_content_html
-  attr_accessible :content, :content_html, :date, :title, :tag_list
+  #attr_accessible :content, :content_html, :date, :title, :tag_list
   validates :content, :title, presence: true
   acts_as_taggable
   acts_as_taggable_on :tag_list
