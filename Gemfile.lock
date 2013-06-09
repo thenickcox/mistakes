@@ -257,7 +257,7 @@ DEPENDENCIES
   guard-rails (>= 0.4.0)
   guard-rspec (>= 2.5.2)
   haml-rails (>= 0.4)
-  high_voltage
+  high_voltage (>= 1.2.2)
   honeypot-captcha
   html2haml (>= 1.0.1)
   hub (>= 1.10.2)

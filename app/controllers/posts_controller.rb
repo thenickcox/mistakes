@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   
   def post_params
-    params.require(:post).permit(:content, :title, :content_html, :date, :tag_list)
+    params.require(:post).permit(:content, :title, :content_html, :date, :tag_list, :nickname)
   end
   
   # GET /posts
