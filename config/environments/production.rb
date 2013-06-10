@@ -53,6 +53,7 @@ Mistakes::Application.configure do
 
   config.eager_load = true
 
+  config.assets.initialize_on_precompile = false
   # Compress JavaScripts and CSS
   config.assets.js_compressor = :uglifier
 
