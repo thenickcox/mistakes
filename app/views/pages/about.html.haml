@@ -1,44 +1,46 @@
-%h1
-  We all make mistakes.
-  %br
-  Get that big one off your chest.
+.about
+  %h1
+    We all make mistakes.
+    %br
+    Get that big one off your chest.
 
-%p I'm a developer. Which means that, from time to time, I make mistakes. I deploy code that, for some reason unforseen to me when I wrote it, breaks. I've had to learn to accept this over the past few years, and recently, I've started to rethink how I look at failure.
+  .content
+    %p I'm a developer. Which means that, from time to time, I make mistakes. I deploy code that, for some reason unforseen to me when I wrote it, breaks. I've had to learn to accept this over the past few years, and recently, I've started to rethink how I look at failure.
 
-%p
-  Not too long ago, I heard a riveting episode of NPR's
-  = link_to 'TED Radio Hour', 'http://blog.ted.com/tag/ted-radio-hour/'
-  on
-  = succeed '.' do
-    = link_to 'what happens when we make mistakes', 'http://blog.ted.com/2013/03/29/ted-radio-hour-explores-what-happens-when-we-make-mistakes/'
-  On the program, there was an interview with an ER doctor in Toronto named 
-  = succeed '.' do
-    = link_to 'Brian Goldman', 'http://www.ted.com/talks/brian_goldman_doctors_make_mistakes_can_we_talk_about_that.html'
-  Dr. Goldman talked about how even highly skilled and trained doctors make mistakes, and how scary, but how necessary that can be to talk about. His thesis was that there needs to be a forum where doctors can be transparent about their failings in the hopes of learning from them themselves and teaching others.
+    %p
+      Not too long ago, I heard a riveting episode of NPR's
+      = link_to 'TED Radio Hour', 'http://blog.ted.com/tag/ted-radio-hour/'
+      on
+      = succeed '.' do
+        = link_to 'what happens when we make mistakes', 'http://blog.ted.com/2013/03/29/ted-radio-hour-explores-what-happens-when-we-make-mistakes/'
+      On the program, there was an interview with an ER doctor in Toronto named 
+      = succeed '.' do
+        = link_to 'Brian Goldman', 'http://www.ted.com/talks/brian_goldman_doctors_make_mistakes_can_we_talk_about_that.html'
+      Dr. Goldman talked about how even highly skilled and trained doctors make mistakes, and how scary, but how necessary that can be to talk about. His thesis was that there needs to be a forum where doctors can be transparent about their failings in the hopes of learning from them themselves and teaching others.
 
-%p I began to wonder why we don't foster this culture in software.
+    %p I began to wonder why we don't foster this culture in software.
 
-%h3 Blameless Postmortems
-%p
-  While I was considering the idea of how we handle failure culturally as developers, I read an excellent article by John Allpaw, an engineer at
-  = link_to 'Etsy', 'http://etsy.com'
-  on
-  = succeed '.' do
-    = link_to 'blameless postmortems', 'http://codeascraft.com/2012/05/22/blameless-postmortems/'
-  Allspaw asserted that, in order for an engineering team to learn from failure, the engineers responsible have to be encouraged to be transparent and give a detailed account of the circumstances around it. But in an environment in which the engineer feels fear of reprimand, she or he will be discouraged from offering this evidence. Indeed, 
+    %h3 Blameless Postmortems
+    %p
+      While I was considering the idea of how we handle failure culturally as developers, I read an excellent article by John Allpaw, an engineer at
+      = link_to 'Etsy', 'http://etsy.com'
+      on
+      = succeed '.' do
+        = link_to 'blameless postmortems', 'http://codeascraft.com/2012/05/22/blameless-postmortems/'
+      Allspaw asserted that, in order for an engineering team to learn from failure, the engineers responsible have to be encouraged to be transparent and give a detailed account of the circumstances around it. But in an environment in which the engineer feels fear of reprimand, she or he will be discouraged from offering this evidence. Indeed, 
 
-%blockquote
-  %p
-    [An] engineer who thinks they’re going to be reprimanded are disincentivized to give the details necessary to get an understanding of the mechanism, pathology, and operation of the failure.
-    This lack of understanding of how the accident occurred all but guarantees that it will repeat.
+    %blockquote
+      %p
+        [An] engineer who thinks they’re going to be reprimanded are disincentivized to give the details necessary to get an understanding of the mechanism, pathology, and operation of the failure.
+        This lack of understanding of how the accident occurred all but guarantees that it will repeat.
 
-%p So I set up this forum to speak anonymously about our mistakes, in the hope that it would encourage us to consider how we handle failure, and, more importantly, how we learn from it.
+    %p So I set up this forum to speak anonymously about our mistakes, in the hope that it would encourage us to consider how we handle failure, and, more importantly, how we learn from it.
 
-%p
-  So what are you waiting for?
-  = succeed '.' do
-    = link_to 'Share your story now', new_post_path 
+    %p
+      So what are you waiting for?
+      = succeed '.' do
+        = link_to 'Share your story now', new_post_path 
 
 
 
-  
+    

@@ -1,11 +1,16 @@
 - @posts.order('created_at DESC').each do |post|
-  %h1= post.title
-  %h4.date= formatted_date(post) 
-  %div= render_post(post)
-  %ul
-    - post.tag_list.each do |t|
-      %li= link_to t, tag_path(t)
-  %ul.admin
-    %td= link_to 'Edit', edit_post_path(post)
-    %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+  .post
+    %h1= post.title
+    %h4.date= formatted_date(post) 
+    .content= render_post(post)
+    .tags-container
+      %p Tags:
+      %ul.tags
+        - post.tag_list.each do |t|
+          %li= link_to t, tag_path(t)
+    %ul.admin
+      %td
+        %a{ class: 'btn btn-info', href: edit_post_path(post) } Edit
+      %td
+        %a{ class: 'btn btn-danger', href: post, method: :delete, :data => { :confirm => 'Are you sure?' } } Destroy
 

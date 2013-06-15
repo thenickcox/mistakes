@@ -1,10 +1,15 @@
 = simple_form_for @post do |f|
   = f.error_notification
   .form-inputs
-    = f.input :title
-    = f.input :content
+    = f.input :title, label: 'What should we call your story?'
+    %p
+      Tell us everything. This field supports
+      = succeed ',' do
+        = link_to 'GitHub flavored markdown', 'https://help.github.com/articles/github-flavored-markdown'
+      so feel free to use words, animated gifs, code, or whatever helps tell your story.
+    = f.input :content, label: false
     = f.input :nickname, label: 'This is for bots only. Leave this blank if you are human.'
-    = f.text_field :tag_list, label: 'Languages (comma separated)'
+    = f.input :tag_list, label: 'Languages or tags (comma separated, optional)', placeholder: 'javascript, ruby'
 
   .form-actions
-    = f.button :submit
+    = f.button :submit, 'Come Clean'

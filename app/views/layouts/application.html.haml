@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
-      %title= content_for?(:title) ? yield(:title) : "Mistakes"
+      %title= content_for?(:title) ? yield(:title) : "Software Confessional"
       %meta{:content => content_for?(:description) ? yield(:description) : "Mistakes", :name => "description"}
         = stylesheet_link_tag "application", :media => "all"
         = javascript_include_tag "application"
@@ -22,10 +22,9 @@
             .span12
               = render 'layouts/messages'
               = yield
-          %footer
       / ! end of .container
     / ! end of #main
-    %footer
+    %footer.navbar.navbar-fixed-bottom
       &copy; 2013
       = succeed '.' do
         = link_to 'Nick Cox', 'http://nickcox.me'

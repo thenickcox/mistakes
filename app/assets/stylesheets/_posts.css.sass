@@ -1,0 +1,129 @@
+@import colors
+
+html, body, #main
+  background: url(image_path('bg.png'))
+  color: #4C4B4A
+
+.content
+  margin: 0 -20px 100px 0
+
+.new_post
+  label, p
+    color: $off_white
+  input[type=text], textarea
+    background: $red_desat + 50
+    border: 1px solid $red_desat - 10
+    box-shadow: 0 1px 2px #464646 inset
+  .form-actions
+    background: transparent
+    border-top: none
+  .btn
+    background: $red_desat + 10
+    border:
+      bottom: 8px solid $red_desat - 30
+      left: 1px solid $red_desat - 30 
+      top: none
+      right: 1px solid $red_desat - 30 
+    color: $off_white
+    text-shadow: 0 1px 0px $red_desat - 30
+    font-size: 2em
+    font-family: 'franklin-gothic-urw-comp', 'Franklin Gothic', 'Helvetica Neue', Helvetica, sans-serif 
+    padding: 15px 45px
+    &:hover
+      background: $red_desat + 18
+      color: $off_white
+    &:active, &:focus
+      background: $red_desat - 10
+      color: $off_white
+      border:
+        bottom: 2px solid $red_desat - 30
+        left: 1px solid $red_desat - 30 
+        top: none
+        right: 1px solid $red_desat - 30 
+
+abbr[title=required]
+  display: none
+
+::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder
+  color: #000
+  font-family: inherit
+
+::-moz-selection, ::selection
+  background: $red_desat - 30
+  color: #fff
+
+.post
+  border-top: 1px solid $red_desat - 30
+  border-bottom: 1px solid $red_desat + 20
+  padding: 20px 0
+  &:first-child
+    border-top: none
+  &:last-child
+    border-bottom: none
+  .content
+    background: #fff
+    border: 1px solid $red_desat - 15
+    padding: 25px
+    margin: 20px 0
+    border-radius: 3px
+
+.about .content
+  background: #fff
+  border: 1px solid $red_desat - 15
+  padding: 25px
+  margin: 20px 0
+  border-radius: 3px
+  a
+    &:link, &:visited
+      color: $red_desat
+      text-decoration: underline
+    &:hover
+      color: $red_desat - 15
+
+
+#main
+  blockquote
+    border-left: 5px solid $red_desat + 30
+    font-style: italic
+    margin: 40px 0
+    position: relative
+    left: 15px
+    p
+      font-family: 'jubilat', Georgia
+      font-weight: 100
+      font-size: 1.95em
+      line-height: 1.2
+      color: #464646
+      letter-spacing: 1px
+
+
+.tags-container
+  display: inline-block
+  margin: 10px -10px 0 0
+  p
+    float: left
+    color: $off_white
+    font-weight: 700
+    font-size: 1.1em
+    text-shadow: 0 1px 1px $red_desat - 50
+  ul
+    float: left
+    li
+      float: left
+      display: inline
+      a
+        &:link
+          margin-right: 5px
+          background: #fff
+          border: 1px solid $red_desat - 10
+          border-radius: 10px
+          padding: 3px 13px
+        &:hover
+          color: #646464
+          background-color: #fff !important
+          border: 1px solid $red_desat + 10
+          text-decoration: none
+
+.admin
+  a:visited
+    color: #fff
