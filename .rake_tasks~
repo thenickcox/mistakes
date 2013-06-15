@@ -1,4 +1,6 @@
 assets:clean
+assets:clobber
+assets:environment
 assets:precompile
 cucumber
 cucumber:all
@@ -11,6 +13,8 @@ db:fixtures:load
 db:migrate
 db:migrate:status
 db:rollback
+db:schema:cache:clear
+db:schema:cache:dump
 db:schema:dump
 db:schema:load
 db:seed
@@ -34,8 +38,9 @@ spec:requests
 spec:routing
 stats
 test
+test:all
+test:all:db
 test:recent
-test:single
 test:uncommitted
 time:zones:all
 tmp:clear

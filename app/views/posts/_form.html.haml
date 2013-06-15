@@ -4,7 +4,7 @@
     = f.input :title
     = f.input :content
     = f.input :nickname, label: 'This is for bots only. Leave this blank if you are human.'
-    = f.input :tag_list, label: 'Languages (comma separated)'
+    = f.text_field :tag_list, label: 'Languages (comma separated)'
 
   .form-actions
     = f.button :submit

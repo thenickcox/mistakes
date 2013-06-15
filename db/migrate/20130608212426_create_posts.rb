@@ -6,7 +6,6 @@ class CreatePosts < ActiveRecord::Migration
       t.text :content_html
       t.string :nickname
       t.date :date
-      t.string :tag_list
       t.boolean :public
 
       t.timestamps

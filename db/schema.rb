@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20130608213346) do
     t.text     "content_html"
     t.string   "nickname"
     t.date     "date"
-    t.string   "tag_list"
     t.boolean  "public"
     t.datetime "created_at"
     t.datetime "updated_at"

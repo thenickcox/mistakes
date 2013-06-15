@@ -1,9 +1,11 @@
-- @posts.each do |post|
+- @posts.order('created_at DESC').each do |post|
   %h1= post.title
   %h4.date= formatted_date(post) 
   %div= render_post(post)
-  - if can? :manage, @post
-    %ul.admin
-      %td= link_to 'Edit', edit_post_path(post)
-      %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+  %ul
+    - post.tag_list.each do |t|
+      %li= link_to t, tag_path(t)
+  %ul.admin
+    %td= link_to 'Edit', edit_post_path(post)
+    %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
