@@ -3,6 +3,8 @@
 html, body, #main
   background: url(image_path('bg.png'))
   color: #4C4B4A
+  @media all and (max-width: 767px) and (min-width: 319px)
+    overflow-x: hidden
 
 .content
   margin: 0 -20px 100px 0
@@ -11,6 +13,8 @@ html, body, #main
   margin-top: 35px
   label, p
     color: $off_white
+    @media all and (max-width: 767px) and (min-width: 319px)
+      width: 88%
     a:link, a:visited
       color: $red_desat + 50
       text-decoration: underline
@@ -28,6 +32,8 @@ html, body, #main
     &:focus
       border-color: $red_desat - 30
       box-shadow: 0 0 8px $red_desat + 30
+    @media all and (max-width: 767px) and (min-width: 319px)
+      width: 90%
   textarea
     height: 350px
   .form-actions
@@ -46,6 +52,10 @@ html, body, #main
     font-size: 2em
     font-family: 'franklin-gothic-urw-comp', 'Franklin Gothic', 'Helvetica Neue', Helvetica, sans-serif 
     padding: 15px 45px
+    @media all and (max-width: 480px) and (min-width: 319px)
+      width: 99%
+    @media all and (max-width: 767px) and (min-width: 481px)
+      width: 95%
     &:hover
       background: $red_desat + 18
       color: $off_white
@@ -78,35 +88,6 @@ ul.admin
     padding: 25px
     margin: 20px 0
     border-radius: 3px
-
-.about .content
-  background: #fff
-  border: 1px solid $red_desat - 15
-  padding: 25px
-  margin: 20px 0
-  border-radius: 3px
-  a
-    &:link, &:visited
-      color: $red_desat
-      text-decoration: underline
-    &:hover
-      color: $red_desat - 15
-
-
-#main
-  blockquote
-    border-left: 5px solid $red_desat + 30
-    font-style: italic
-    margin: 40px 0
-    position: relative
-    left: 15px
-    p
-      font-family: 'jubilat', Georgia
-      font-weight: 100
-      font-size: 1.95em
-      line-height: 1.2
-      color: #464646
-      letter-spacing: 1px
 
 
 .tags-container

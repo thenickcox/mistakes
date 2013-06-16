@@ -46,6 +46,8 @@ footer
   background: $charcoal
   border-top: 3px solid $charcoal + 15
   color: $off_white
+  @media all and (max-width: 767px) and (min-width: 319px)
+    padding: 25px
   a 
     &:link, &:active, &:visited
       color: $red_desat
@@ -62,5 +64,35 @@ footer
 ::-moz-selection, ::selection
   background: $red_desat - 30
   color: #fff
+
+.about .content
+  background: #fff
+  border: 1px solid $red_desat - 15
+  padding: 25px
+  margin: 20px 0
+  border-radius: 3px
+  max-width: 80%
+  a
+    &:link, &:visited
+      color: $red_desat
+      text-decoration: underline
+    &:hover
+      color: $red_desat - 15
+
+
+#main
+  blockquote
+    border-left: 5px solid $red_desat + 30
+    font-style: italic
+    margin: 40px 0
+    position: relative
+    left: 15px
+    p
+      font-family: 'jubilat', Georgia
+      font-weight: 100
+      font-size: 1.95em
+      line-height: 1.2
+      color: #464646
+      letter-spacing: 1px
 
 

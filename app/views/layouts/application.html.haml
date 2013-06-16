@@ -25,13 +25,14 @@
       / ! end of .container
     / ! end of #main
     %footer.navbar.navbar-fixed-bottom
-      &copy; 2013
-      = succeed '.' do
-        = link_to 'Nick Cox', 'http://nickcox.me'
-      Licensed under the
-      = succeed '.' do
-        = link_to 'MIT License', 'http://opensource.org/licenses/MIT'
-      &nbsp;&nbsp;
-      = link_to 'About', page_path('about')
-      &nbsp;&nbsp;
-      = link_to 'View code on GitHub', 'https://github.com/thenickcox/mistakes'
+      .footer-container
+        &copy; 2013
+        = succeed '.' do
+          = link_to 'Nick Cox', 'http://nickcox.me'
+        Licensed under the
+        = succeed '.' do
+          = link_to 'MIT License', 'http://opensource.org/licenses/MIT'
+        &nbsp;&nbsp;
+        = link_to 'About', page_path('about')
+        &nbsp;&nbsp;
+        = link_to 'View code on GitHub', 'https://github.com/thenickcox/mistakes'
