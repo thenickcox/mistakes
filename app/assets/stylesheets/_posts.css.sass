@@ -8,15 +8,32 @@ html, body, #main
   margin: 0 -20px 100px 0
 
 .new_post
+  margin-top: 35px
   label, p
     color: $off_white
+    a:link, a:visited
+      color: $red_desat + 50
+      text-decoration: underline
+    a:hover
+      color: $red_desat + 30
   input[type=text], textarea
+    font-family: 'jaf-bernino-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    font-size: 20px
+    padding: 10px 6px
+    height: auto
+    width: 500px
     background: $red_desat + 50
     border: 1px solid $red_desat - 10
     box-shadow: 0 1px 2px #464646 inset
+    &:focus
+      border-color: $red_desat - 30
+      box-shadow: 0 0 8px $red_desat + 30
+  textarea
+    height: 350px
   .form-actions
     background: transparent
     border-top: none
+    padding-left: 0
   .btn
     background: $red_desat + 10
     border:
@@ -33,7 +50,7 @@ html, body, #main
       background: $red_desat + 18
       color: $off_white
     &:active, &:focus
-      background: $red_desat - 10
+      background: $red_desat + 18
       color: $off_white
       border:
         bottom: 2px solid $red_desat - 30
@@ -44,13 +61,8 @@ html, body, #main
 abbr[title=required]
   display: none
 
-::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder
-  color: #000
-  font-family: inherit
-
-::-moz-selection, ::selection
-  background: $red_desat - 30
-  color: #fff
+ul.admin
+  margin-left: 0
 
 .post
   border-top: 1px solid $red_desat - 30

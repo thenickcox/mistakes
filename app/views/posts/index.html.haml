@@ -8,9 +8,5 @@
       %ul.tags
         - post.tag_list.each do |t|
           %li= link_to t, tag_path(t)
-    %ul.admin
-      %td
-        %a{ class: 'btn btn-info', href: edit_post_path(post) } Edit
-      %td
-        %a{ class: 'btn btn-danger', href: post, method: :delete, :data => { :confirm => 'Are you sure?' } } Destroy
-
+    - if can? :manage, @post
+      = render 'layouts/admin_buttons', post: @post
