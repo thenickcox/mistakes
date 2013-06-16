@@ -1,0 +1,6 @@
+%ul.admin
+  %td
+    %a{ class: 'btn btn-info', href: edit_post_path(post) } Edit
+  %td
+    %a{ class: 'btn btn-danger', href: post, method: :delete, :data => { :confirm => 'Are you sure?' } } Destroy
+
