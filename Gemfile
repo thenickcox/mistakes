@@ -38,8 +38,11 @@ gem 'acts-as-taggable-on'
 gem 'high_voltage', '>= 1.2.2'
 gem 'honeypot-captcha'
 gem 'redcarpet'
-gem 'albino'  
+gem 'albino'
 gem 'nokogiri'
+
+gem 'spork-rails'
+
 
 gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
 gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
