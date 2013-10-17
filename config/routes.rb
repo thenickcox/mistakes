@@ -7,9 +7,4 @@ Mistakes::Application.routes.draw do
   get 'tags/:tag', to: 'posts#index', as: :tag
   resources :posts
 
-  devise_scope :user do
-    root '/login' => 'devise/sessions#new'
-    match '/logout' => 'devise/sessions#destroy'
-  end
-
 end
